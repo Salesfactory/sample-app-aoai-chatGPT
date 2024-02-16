@@ -10,7 +10,7 @@ import { isEmpty } from "lodash-es";
 import DOMPurify from 'dompurify';
 
 import styles from "./Chat.module.css";
-import Contoso from "../../assets/Contoso.svg";
+import SalesFactoryLogo from "../../assets/SalesFactoryLogo.png";
 import { XSSAllowTags } from "../../constants/xssAllowTags";
 
 import {
@@ -639,7 +639,7 @@ const Chat = () => {
                         {!messages || messages.length < 1 ? (
                             <Stack className={styles.chatEmptyState}>
                                 <img
-                                    src='/src/assets/SalesFactoryLogo.png'
+                                    src={SalesFactoryLogo}
                                     className={styles.chatIcon}
                                     aria-hidden="true"
                                 />
