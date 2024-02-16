@@ -1,9 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: "Gotham Ultra";
+    font-display: swap;
+    src: url(//8446995.fs1.hubspotusercontent-na1.net/hubfs/8446995/raw_assets/public/SalesFactory-2021/fonts/Gotham-Ultra.ttf) format("truetype"), url(//8446995.fs1.hubspotusercontent-na1.net/hubfs/8446995/raw_assets/public/SalesFactory-2021/fonts/Gotham-Ultra.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Plantin MT Pro Light";
+    font-display: swap;
+    src: url(//8446995.fs1.hubspotusercontent-na1.net/hubfs/8446995/raw_assets/public/SalesFactory-2021/fonts/PlantinMTProLight.ttf) format("truetype"), url(//8446995.fs1.hubspotusercontent-na1.net/hubfs/8446995/raw_assets/public/SalesFactory-2021/fonts/PlantinMTProLight.woff) format("woff")
+}
+
+@font-face {
+    font-family: "Gotham Black";
+    font-display: swap;
+    src: url(//8446995.fs1.hubspotusercontent-na1.net/hubfs/8446995/raw_assets/public/SalesFactory-2021/fonts/Gotham-Black.ttf) format("truetype"), url(//8446995.fs1.hubspotusercontent-na1.net/hubfs/8446995/raw_assets/public/SalesFactory-2021/fonts/Gotham-Black.woff) format("woff")
+}
+
+@font-face {
+    font-family: "Gotham Bold";
+    font-display: swap;
+    src: url(//8446995.fs1.hubspotusercontent-na1.net/hubfs/8446995/raw_assets/public/SalesFactory-2021/fonts/Gotham-Bold.ttf) format("truetype"), url(//8446995.fs1.hubspotusercontent-na1.net/hubfs/8446995/raw_assets/public/SalesFactory-2021/fonts/Gotham-Bold.woff) format("woff")
+}
 * {
     box-sizing: border-box;
 }
 
 html,
 body {
+    font-family: 'Montserrat', Arial, sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -11,11 +37,14 @@ body {
 
 html {
     background: #f2f2f2;
-    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+h6 {
+    font-family: 'Gotham Black', Arial, sans-serif;
+}
 #root {
     height: 100%;
 }
