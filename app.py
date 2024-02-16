@@ -76,12 +76,12 @@ AZURE_SEARCH_PERMITTED_GROUPS_COLUMN = os.environ.get("AZURE_SEARCH_PERMITTED_GR
 AZURE_SEARCH_STRICTNESS = os.environ.get("AZURE_SEARCH_STRICTNESS", SEARCH_STRICTNESS)
 
 # UI configuration 
-UI_TITLE = os.environ.get("UI_TITLE") or "Sales Factory"
+UI_TITLE = os.environ.get("UI_TITLE") or ""
 UI_LOGO = os.environ.get("UI_LOGO")
 UI_CHAT_LOGO = os.environ.get("UI_CHAT_LOGO")
-UI_CHAT_TITLE = os.environ.get("UI_CHAT_TITLE") or "Sales Factory Chatbot"
+UI_CHAT_TITLE = os.environ.get("UI_CHAT_TITLE") or "Chatbot"
 UI_CHAT_DESCRIPTION = os.environ.get("UI_CHAT_DESCRIPTION") or "This chatbot is configured to answer your questions"
-UI_FAVICON = os.environ.get("UI_FAVICON") or "/favicon.ico"
+UI_FAVICON = os.environ.get("UI_FAVICON") or "https://www.salesfactory.com/hubfs/cropped-Sales-Factory-2020-bug-black@2x-192x192-1.png"
 UI_SHOW_SHARE_BUTTON = os.environ.get("UI_SHOW_SHARE_BUTTON", "true").lower() == "true"
 
 # AOAI Integration Settings
