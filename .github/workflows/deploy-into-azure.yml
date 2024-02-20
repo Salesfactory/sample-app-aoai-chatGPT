@@ -1,0 +1,42 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
+
+name: Build and deploy Python app to Azure Web App - ClewTest
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies and build frontend
+        run: |
+          cd frontend
+          npm install
+          npm run build
+        if: success()
+
+      - name: Set up Python virtual environment
+        run: |
+          python3 -m venv .venv
+          source .venv/bin/activate
+          pip install -r requirements.txt
+        if: success()
+
+      - name: Install Azure CLI
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.30.0
+          inlineScript: |
+            az login --service-principal -u ${{ secrets.AZUREAPPSERVICE_CLIENTID_DED6980A1F5144038916CFB745A500BC }} -p ${{ secrets.AZURE_CLIENT_SECRET}} --tenant ${{ secrets.AZUREAPPSERVICE_TENANTID_F650DE3FA7394E7CB10CF29ADAC94F5C }}
+            az account set --subscription ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_479D4F22C1A2441CB959F548E5EC157A }}
+            az webapp up --runtime PYTHON:3.11 --name ClewTest --resource-group rg-gpt-rag2
+        if: success()
