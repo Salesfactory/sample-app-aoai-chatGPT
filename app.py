@@ -33,7 +33,7 @@ def create_app():
 
 @bp.route("/")
 async def index():
-    return await render_template("index.html", title=UI_TITLE, favicon=UI_FAVICON)
+    return await render_template("index.html", title=UI_TITLE, favicon='favicon.ico')
 
 @bp.route("/favicon.ico")
 async def favicon():
