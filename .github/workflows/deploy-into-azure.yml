@@ -37,7 +37,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Azure CLI
-        uses: azure/setup-azure-cli@v1
+        uses: azure/CLI@v1
 
       - name: Azure login
         run: az login --service-principal -u ${{ secrets.AZUREAPPSERVICE_CLIENTID_DED6980A1F5144038916CFB745A500BC }} -p ${{ secrets.AZURE_CLIENT_SECRET}} --tenant ${{ secrets.AZUREAPPSERVICE_TENANTID_F650DE3FA7394E7CB10CF29ADAC94F5C }}
